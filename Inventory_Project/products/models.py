@@ -9,7 +9,7 @@ class ProductModel(models.Model):
     
     price = models.PositiveIntegerField()
     
-    production_date = models.DateField()
+    production_date = models.DateField(verbose_name='Production Date')
     
     def __str__(self):
         return f'{self.name} - {self.price} BDT'

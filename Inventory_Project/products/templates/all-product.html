@@ -1,15 +1,34 @@
 {% extends 'layout/base.html' %}
 
-
 {% block title %}
-    Product List    
-{% endblock title %}
-
-
+  Product List
+{% endblock %}
 
 {% block content %}
-    <br>
-    <center><h2>All Product Informations</h2></center><br>
-    
-{% endblock content %}
-    
+  <br />
+  <center>
+    <h2>All Product Informations</h2>
+  </center><br />
+
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-danger">
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Product Price</th>
+        <th>Production Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for data in p_data %}
+        <tr>
+          <td>{{data.name}}</td>
+          <td>{{data.description}}</td>
+          <td>{{data.price}}</td>
+          <td>{{data.production_date}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
