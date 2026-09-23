@@ -12,4 +12,4 @@ class ProductModel(models.Model):
     production_date = models.DateField()
     
     def __str__(self):
-        return f'{self.name} - {self.price}'
+        return f'{self.name} - {self.price} BDT'
